@@ -55,7 +55,12 @@ plugins:
 highlighter: rouge
 
 # jekyll theme
-theme: null
+remote_theme: greenelab/lab-website-template
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
 
 # sass settings
 sass:
