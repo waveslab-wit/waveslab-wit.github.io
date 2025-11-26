@@ -1,94 +1,30 @@
-/* Color palette */
-:root {
-    --dark-blue: #003a63;
-    --light-blue: #e2eef7;
-    --text-dark: #222;
-    --light-gray-bg: #f7f7f7;
+/* Typography updates */
+body {
+    font-family: 'Merriweather Sans', Arial, sans-serif;
 }
 
-/* Top bar */
-.top-bar {
-    background: var(--dark-blue);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.3rem 1rem;
-}
-
-.college-logo {
-    height: 40px;
-}
-
-.lab-title {
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-/* Hero Banner */
-.hero-banner {
-    background: var(--light-blue);
-    padding: 2rem 1rem;
-}
-
-.hero-content {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.hero-text h1 {
-    font-size: 2.4rem;
-    margin: 0 0 0.4rem 0;
-    color: var(--dark-blue);
-}
-
-.hero-text p {
-    margin: 0.2rem 0;
-    color: var(--text-dark);
-}
-
+.lab-title,
+.hero-text h1,
+.hero-text p,
 .institution {
-    font-weight: 500;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
+/* Hero logo size increased */
 .waves-logo {
-    max-width: 180px;
+    max-width: 260px; /* increased for better presence */
+    height: auto;
     margin-left: 2rem;
 }
 
-/* Page Body */
-.page-body {
-    background: var(--light-gray-bg);
-    padding-bottom: 2rem;
+/* Improve vertical alignment */
+.hero-content {
+    align-items: center;
+    min-height: 200px;
 }
 
-/* Cards */
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    padding: 2rem 1rem;
-}
-
-.card {
-    background: white;
-    width: 260px;
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-/* Footer */
-footer {
-    background: var(--dark-blue);
-    color: white;
-    text-align: center;
-    padding: 1.2rem;
-    font-size: 0.85rem;
-    margin-top: 2rem;
+/* Allow more breathing room for title */
+.hero-text h1 {
+    font-size: 2.6rem;
+    margin-bottom: 0.6rem;
 }
