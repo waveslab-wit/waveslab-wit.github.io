@@ -1,170 +1,102 @@
-/* --------------------------------------------------
-   WAVES Lab - Website Styling
-   Updated for branding & header improvements
--------------------------------------------------- */
-
-/* Google Font already imported in index.html */
-:root {
-    --dark-blue: #003a63;
-    --light-blue: #e8f2fa;
-    --text-dark: #1e1e1e;
-    --light-bg: #f8f9fb;
-}
-
-/* Global Defaults */
-body {
+/* GLOBAL RESET */
+* {
     margin: 0;
-    font-family: 'Merriweather Sans', Arial, sans-serif;
-    background-color: var(--light-bg);
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COLORS */
+:root {
+    --dark-blue: #002244;
+    --light-blue: #e7eff9;
+    --text-dark: #111;
+    --text-light: #ffffff;
+    --body-bg: #fafafa;
+}
+
+/* GENERAL PAGE LAYOUT */
+body {
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--text-dark);
+    background-color: var(--body-bg);
+    line-height: 1.6;
 }
 
-/* --------------------------------------------------
-   TOP BAR
--------------------------------------------------- */
-.top-bar {
-    background: var(--dark-blue);
-    color: white;
+/* HEADER SECTION — TOP DARK NAV */
+.header-top {
+    background-color: var(--dark-blue);
+    padding: 10px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.4rem 1rem;
 }
 
-.college-logo {
-    height: 44px;
+.header-top img {
+    height: 45px; /* small logo */
 }
 
-.lab-title {
+.header-title {
     font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.3px;
+    font-weight: bold;
+    color: var(--text-light);
+    text-align: right;
 }
 
-/* --------------------------------------------------
-   HERO BANNER
--------------------------------------------------- */
-.hero-banner {
-    background: var(--light-blue);
-    padding: 2.8rem 1.5rem;
-    border-bottom: 2px solid #d4e3ef;
-}
-
-.hero-content {
-    max-width: 1250px;
-    margin: auto;
+/* LOWER BANNER SECTION — LIGHT BLUE */
+.header-lower {
+    background-color: var(--light-blue);
+    padding: 25px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.hero-text h1 {
-    font-size: 2.8rem;
-    margin: 0 0 0.5rem 0;
+.header-lower img {
+    height: 110px; /* waves logo bigger */
+}
+
+/* MAIN CONTENT AREA */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* SECTION HEADERS */
+h2 {
+    margin: 25px 0 10px;
+    font-size: 1.4rem;
     color: var(--dark-blue);
-    font-weight: 700;
+    font-weight: bold;
 }
 
-.hero-text p {
-    margin: 0.25rem 0;
-    font-size: 1.05rem;
-}
-
-.institution {
-    margin-top: 0.7rem;
-    font-weight: 600;
+/* TEXT SPACING */
+p {
+    margin-bottom: 15px;
     font-size: 1rem;
-    color: var(--dark-blue);
 }
 
-.waves-logo {
-    max-width: 320px;
-    height: auto;
-    margin-left: 2rem;
-}
-
-/* --------------------------------------------------
-   MAIN SECTIONS
--------------------------------------------------- */
-.page-body {
-    background: white;
-    padding-bottom: 3rem;
-}
-
-.about {
-    text-align: center;
-    padding: 2.5rem 1.2rem;
-    max-width: 900px;
-    margin: auto;
-}
-
-.about h3 {
-    font-size: 1.75rem;
-    margin-bottom: 0.75rem;
-    color: var(--dark-blue);
-}
-
-/* Cards Section */
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 1.4rem;
-    flex-wrap: wrap;
-    padding: 2.5rem 1.5rem;
-}
-
-.card {
-    background: var(--light-bg);
-    width: 300px;
-    padding: 1.6rem;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    border-left: 5px solid var(--dark-blue);
-}
-
-.card h4 {
-    margin-top: 0;
-    color: var(--dark-blue);
-}
-
-/* --------------------------------------------------
-   FOOTER
--------------------------------------------------- */
-footer {
-    background: var(--dark-blue);
-    color: white;
-    text-align: center;
-    padding: 1.3rem;
-    font-size: 0.85rem;
-    margin-top: 2rem;
-}
-
-/* --------------------------------------------------
-   RESPONSIVE FIXES
--------------------------------------------------- */
-@media (max-width: 850px) {
-    .hero-content {
+/* RESPONSIVE (MOBILE FIXES) */
+@media (max-width: 760px) {
+    .header-top {
         flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .header-title {
         text-align: center;
     }
 
-    .waves-logo {
-        margin: 1.5rem 0 0 0;
-        max-width: 260px;
+    .header-lower {
+        justify-content: center;
     }
 
-    .lab-title {
-        font-size: 0.85rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 2.2rem;
+    .header-lower img {
+        height: 80px;
     }
 
-    .lab-title {
-        display: none; /* cleaner for very small screens */
+    main {
+        margin-top: 20px;
     }
 }
