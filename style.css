@@ -1,82 +1,94 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fa;
-    color: #222;
+/* Color palette */
+:root {
+    --dark-blue: #003a63;
+    --light-blue: #e2eef7;
+    --text-dark: #222;
+    --light-gray-bg: #f7f7f7;
 }
 
-header {
-    text-align: center;
-    padding: 2.5rem 1rem;
-    background-color: #003a63;
+/* Top bar */
+.top-bar {
+    background: var(--dark-blue);
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 1rem;
 }
 
-.logo {
-    max-width: 120px;
-    margin-bottom: 0.5rem;
+.college-logo {
+    height: 40px;
 }
 
-header h1 {
+.lab-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: var(--light-blue);
+    padding: 2rem 1rem;
+}
+
+.hero-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 2.4rem;
+    margin: 0 0 0.4rem 0;
+    color: var(--dark-blue);
+}
+
+.hero-text p {
     margin: 0.2rem 0;
-    font-size: 2.2rem;
-}
-
-header h2 {
-    margin-top: 0;
-    font-weight: 300;
-    font-size: 1.2rem;
+    color: var(--text-dark);
 }
 
 .institution {
-    margin-top: 0.8rem;
-    font-size: 0.95rem;
-    line-height: 1.4;
+    font-weight: 500;
 }
 
-nav {
-    margin-top: 1.5rem;
+.waves-logo {
+    max-width: 180px;
+    margin-left: 2rem;
 }
 
-nav a {
-    margin: 0 1rem;
-    color: #9ed1ff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.95rem;
+/* Page Body */
+.page-body {
+    background: var(--light-gray-bg);
+    padding-bottom: 2rem;
 }
 
-.about {
-    text-align: center;
-    padding: 2.5rem 1.5rem;
-}
-
-.about h3 {
-    font-size: 1.6rem;
-    margin-bottom: 0.8rem;
-}
-
+/* Cards */
 .cards {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 1.2rem;
+    flex-wrap: wrap;
     padding: 2rem 1rem;
 }
 
 .card {
     background: white;
+    width: 260px;
     padding: 1.5rem;
     border-radius: 10px;
-    width: 260px;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Footer */
 footer {
+    background: var(--dark-blue);
+    color: white;
     text-align: center;
     padding: 1.2rem;
-    background-color: #003a63;
-    color: white;
+    font-size: 0.85rem;
     margin-top: 2rem;
 }
