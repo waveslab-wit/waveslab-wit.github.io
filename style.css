@@ -28,69 +28,6 @@ body {
     line-height: 1.6;
 }
 
-/* ========================
-   TOP BAR
-   ======================== */
-.top-bar {
-    background-color: var(--dark-blue);
-    color: var(--text-light);
-    padding: 8px 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.top-bar .college-logo {
-    height: 40px;
-    max-width: 100%;
-}
-
-.top-bar .lab-title {
-    font-size: 0.95rem;
-    font-weight: bold;
-}
-
-/* ========================
-   HEADER SECTIONS
-   ======================== */
-.header-top {
-    background-color: var(--dark-blue);
-    padding: 10px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.header-top img {
-    height: 45px;
-    max-width: 100%;
-}
-
-.header-title {
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: var(--text-light);
-    text-align: right;
-}
-
-.header-lower {
-    background-color: var(--light-blue);
-    padding: 25px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.header-lower img {
-    height: 110px;
-    max-width: 100%;
-}
-
-/* ========================
-   MAIN CONTENT
-   ======================== */
 main {
     max-width: 1100px;
     width: 100%;
@@ -111,6 +48,49 @@ h2, h3, h4 {
 p {
     margin-bottom: 15px;
     font-size: 1rem;
+}
+
+/* ========================
+   HEADER
+   ======================== */
+.site-header {
+    width: 100%;
+}
+
+/* Top row: college logo + lab title */
+.header-top {
+    background-color: var(--dark-blue);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    flex-wrap: wrap;
+}
+
+.header-top img.college-logo {
+    height: 45px;
+    max-width: 100%;
+}
+
+.header-title {
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Bottom row: WAVES logo */
+.header-lower {
+    background-color: var(--light-blue);
+    padding: 20px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-lower img.lab-logo {
+    height: 110px;
+    max-width: 100%;
 }
 
 /* ========================
@@ -159,19 +139,13 @@ img {
         justify-content: center;
     }
 
-    .header-lower img {
+    .header-lower img.lab-logo {
         height: 90px;
     }
 }
 
 @media (max-width: 760px) {
-    /* Top bar stacking */
-    .top-bar {
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
-    }
-
+    /* Stack header top on mobile */
     .header-top {
         flex-direction: column;
         text-align: center;
@@ -183,15 +157,18 @@ img {
         font-size: 0.9rem;
     }
 
-    .header-lower {
-        justify-content: center;
-        padding: 15px;
-    }
-
-    .header-lower img {
+    /* Reduce WAVES logo on mobile */
+    .header-lower img.lab-logo {
         height: 80px;
     }
 
+    /* Cards stack vertically */
+    .cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Adjust main content spacing */
     main {
         margin: 20px auto;
         padding: 0 15px;
@@ -207,11 +184,5 @@ img {
 
     p {
         font-size: 0.95rem;
-    }
-
-    /* Stack cards vertically */
-    .cards {
-        flex-direction: column;
-        gap: 15px;
     }
 }
