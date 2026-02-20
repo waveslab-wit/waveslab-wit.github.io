@@ -94,6 +94,38 @@ p {
 }
 
 /* ========================
+   NAVIGATION BAR
+   ======================== */
+.navbar {
+    background-color: #333;    /* Dark background */
+    font-family: Arial, sans-serif;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the nav items */
+}
+
+.nav-list li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-list li a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+.nav-list li a.active {
+    background-color: #04AA6D;
+}
+
+/* ========================
    CARDS SECTION
    ======================== */
 .cards {
@@ -162,44 +194,14 @@ img {
         height: 80px;
     }
 
-    /* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-    /* NAVIGATION BAR */
-    .navbar {
-        background-color: #333;    /* Dark background */
-        font-family: Arial, sans-serif;
-    }
-
-    /* Remove bullets + inline list */
+    /* Stack nav links vertically on mobile */
     .nav-list {
-        list-style: none;
-        display: flex;
+        flex-direction: column;
     }
 
-    /* NAV LINKS */
     .nav-list li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-        font-size: 16px;
-    }
-
-    /* HOVER EFFECT */
-    .nav-list li a:hover {
-        background-color: #575757;
-        color: #fff;
-    }
-
-    /* ACTIVE PAGE STYLE */
-    .nav-list li a.active {
-        background-color: #04AA6D;
+        padding: 12px 15px;
+        font-size: 14px;
     }
 
     /* Cards stack vertically */
