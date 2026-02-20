@@ -163,10 +163,15 @@ img {
     }
 
     /* ========================
-       NAVIGATION
+       NAVIGATION — STYLISH
        ======================== */
     .site-nav {
         background-color: var(--dark-blue);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        margin: 10px auto;
+        max-width: 1100px;
+        overflow: hidden;
     }
 
     .site-nav ul {
@@ -174,26 +179,49 @@ img {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
     }
 
     .site-nav li {
-        margin: 0 15px;
+        margin: 0;
     }
 
     .site-nav a {
         text-decoration: none;
         color: var(--text-light);
-        font-weight: bold;
-        padding: 12px 0;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 12px 20px;
+        display: inline-block;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    /* Hover effect: smooth background + underline */
+    .site-nav a::after {
+        content: '';
         display: block;
-        transition: color 0.3s, border-bottom 0.3s;
-        border-bottom: 3px solid transparent;
+        width: 0%;
+        height: 3px;
+        background: var(--light-blue);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease;
+        border-radius: 2px;
+    }
+
+    .site-nav a:hover::after,
+    .site-nav a:focus::after {
+        width: 100%;
     }
 
     .site-nav a:hover,
     .site-nav a:focus {
+        background-color: rgba(231, 239, 249, 0.15);
+        border-radius: 6px;
         color: var(--light-blue);
-        border-bottom: 3px solid var(--light-blue);
     }
 
     /* Responsive navigation: stack vertically on small screens */
@@ -204,8 +232,9 @@ img {
             gap: 5px;
         }
 
-        .site-nav li {
-            margin: 0;
+        .site-nav a {
+            width: 90%;
+            text-align: center;
         }
     }
 
