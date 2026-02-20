@@ -166,26 +166,32 @@ img {
        SITE NAVIGATION — WAVES STYLE
        ======================== */
     .site-nav {
-        background-color: var(--dark-blue);
         width: 100%;
+        background-color: var(--dark-blue);
     }
 
     .site-nav ul {
         display: flex;
-        justify-content: space-between; /* left group vs right group */
+        justify-content: flex-start;    /* start all items on the left */
         align-items: center;
         margin: 0;
-        padding: 0 30px;              /* horizontal padding */
+        padding: 0 30px;
         list-style: none;
-        max-width: 1200px;            /* optional for large screens */
+        max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .site-nav .nav-left,
-    .site-nav .nav-right {
-        display: flex;
-        gap: 20px;                   /* spacing between links */
+    .site-nav li {
+        /* default spacing between links */
+    }
+
+    .site-nav li.left {
+        margin-right: 20px;            /* space between left items */
+    }
+
+    .site-nav li.right {
+        margin-left: auto;              /* push Contact all the way to the right */
     }
 
     .site-nav li a {
@@ -195,8 +201,8 @@ img {
         text-decoration: none;
         font-weight: 600;
         text-align: center;
-        transition: background-color 0.3s, color 0.3s;
         border-radius: 6px;
+        transition: background-color 0.3s, color 0.3s;
     }
 
     .site-nav li a:hover,
@@ -219,11 +225,8 @@ img {
             gap: 5px;
         }
 
-        .site-nav .nav-left,
-        .site-nav .nav-right {
-            flex-direction: column;
-            gap: 5px;
-            width: 100%;
+        .site-nav li {
+            margin: 0;
         }
 
         .site-nav li a {
