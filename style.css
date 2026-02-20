@@ -163,45 +163,72 @@ img {
     }
 
     /* ========================
-       NAVIGATION — WAVES STYLE
+       SITE NAVIGATION — WAVES STYLE
        ======================== */
-        .site-nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;               /* horizontal layout */
-        justify-content: center;     /* center items */
+    .site-nav {
         background-color: var(--dark-blue);
+        width: 100%;
     }
 
-    .site-nav ul li {
-        margin: 0;                   /* spacing between items handled by padding on a */
+    .site-nav ul {
+        display: flex;
+        justify-content: space-between; /* left group vs right group */
+        align-items: center;
+        margin: 0;
+        padding: 0 30px;              /* horizontal padding */
+        list-style: none;
+        max-width: 1200px;            /* optional for large screens */
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .site-nav ul li a {
+    .site-nav .nav-left,
+    .site-nav .nav-right {
+        display: flex;
+        gap: 20px;                   /* spacing between links */
+    }
+
+    .site-nav li a {
         display: block;
-        padding: 14px 20px;
+        padding: 14px 16px;
         color: var(--text-light);
         text-decoration: none;
         font-weight: 600;
         text-align: center;
         transition: background-color 0.3s, color 0.3s;
+        border-radius: 6px;
     }
 
-    .site-nav ul li a:hover {
+    .site-nav li a:hover,
+    .site-nav li a:focus {
         background-color: var(--light-blue);
         color: var(--dark-blue);
     }
 
-    /* Mobile stack */
+    /* Active page highlight */
+    .site-nav li a.active {
+        background-color: var(--light-blue);
+        color: var(--dark-blue);
+    }
+
+    /* ===== MOBILE ===== */
     @media (max-width: 760px) {
         .site-nav ul {
             flex-direction: column;
-            align-items: center;
+            padding: 10px 0;
+            gap: 5px;
         }
 
-        .site-nav ul li a {
+        .site-nav .nav-left,
+        .site-nav .nav-right {
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
+        }
+
+        .site-nav li a {
             width: 90%;
+            margin: 0 auto;
         }
     }
 
