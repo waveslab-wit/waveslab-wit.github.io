@@ -165,42 +165,43 @@ img {
     /* ========================
        NAVIGATION — WAVES STYLE
        ======================== */
-    .site-nav ul {
+        .site-nav ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        overflow: hidden;
-        background-color: var(--dark-blue);  /* dark-blue header */
+        display: flex;               /* horizontal layout */
+        justify-content: center;     /* center items */
+        background-color: var(--dark-blue);
     }
 
     .site-nav ul li {
-        float: left;   /* horizontal layout */
+        margin: 0;                   /* spacing between items handled by padding on a */
     }
 
     .site-nav ul li a {
         display: block;
-        color: var(--text-light);       /* white text */
-        text-align: center;
-        padding: 14px 16px;
+        padding: 14px 20px;
+        color: var(--text-light);
         text-decoration: none;
         font-weight: 600;
-        transition: background-color 0.3s ease, color 0.3s ease;
+        text-align: center;
+        transition: background-color 0.3s, color 0.3s;
     }
 
     .site-nav ul li a:hover {
-        background-color: var(--light-blue); /* light-blue hover */
-        color: var(--dark-blue);             /* text becomes dark-blue */
+        background-color: var(--light-blue);
+        color: var(--dark-blue);
     }
 
-    /* Mobile: stack vertically */
+    /* Mobile stack */
     @media (max-width: 760px) {
-        .site-nav ul li {
-            float: none;      /* stack vertically */
-            width: 100%;
+        .site-nav ul {
+            flex-direction: column;
+            align-items: center;
         }
 
         .site-nav ul li a {
-            text-align: center;
+            width: 90%;
         }
     }
 
