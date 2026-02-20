@@ -163,74 +163,43 @@ img {
     }
 
     /* ========================
-       NAVIGATION
+       NAVIGATION — WAVES STYLE
        ======================== */
-    .site-nav {
-        background-color: var(--dark-blue);
-        max-width: 1100px;
-        margin: 10px auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        overflow: hidden;
-    }
-
     .site-nav ul {
-        list-style: none;
-        display: flex;              /* Make the menu horizontal */
-        justify-content: center;    /* Center the menu items */
-        flex-wrap: wrap;
+        list-style-type: none;
         margin: 0;
         padding: 0;
+        overflow: hidden;
+        background-color: var(--dark-blue);  /* dark-blue header */
     }
 
-    .site-nav li {
-        margin: 0;                  /* Remove default spacing */
+    .site-nav ul li {
+        float: left;   /* horizontal layout */
     }
 
-    .site-nav a {
-        display: block;             /* Make clickable area bigger */
-        padding: 12px 25px;         /* Add spacing around links */
-        color: var(--text-light);
-        font-weight: 600;
+    .site-nav ul li a {
+        display: block;
+        color: var(--text-light);       /* white text */
+        text-align: center;
+        padding: 14px 16px;
         text-decoration: none;
-        transition: all 0.3s ease;
-        position: relative;
+        font-weight: 600;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* Hover underline effect */
-    .site-nav a::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 3px;
-        background-color: var(--light-blue);
-        border-radius: 2px;
-        transition: width 0.3s ease;
-    }
-
-    .site-nav a:hover::after,
-    .site-nav a:focus::after {
-        width: 100%;
-    }
-
-    .site-nav a:hover,
-    .site-nav a:focus {
-        color: var(--light-blue);
-        background-color: rgba(231,239,249,0.15);
-        border-radius: 6px;
+    .site-nav ul li a:hover {
+        background-color: var(--light-blue); /* light-blue hover */
+        color: var(--dark-blue);             /* text becomes dark-blue */
     }
 
     /* Mobile: stack vertically */
     @media (max-width: 760px) {
-        .site-nav ul {
-            flex-direction: column;
-            align-items: center;
+        .site-nav ul li {
+            float: none;      /* stack vertically */
+            width: 100%;
         }
 
-        .site-nav a {
-            width: 90%;
+        .site-nav ul li a {
             text-align: center;
         }
     }
