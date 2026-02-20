@@ -162,6 +162,53 @@ img {
         height: 80px;
     }
 
+    /* ========================
+       NAVIGATION
+       ======================== */
+    .site-nav {
+        background-color: var(--dark-blue);
+    }
+
+    .site-nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .site-nav li {
+        margin: 0 15px;
+    }
+
+    .site-nav a {
+        text-decoration: none;
+        color: var(--text-light);
+        font-weight: bold;
+        padding: 12px 0;
+        display: block;
+        transition: color 0.3s, border-bottom 0.3s;
+        border-bottom: 3px solid transparent;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus {
+        color: var(--light-blue);
+        border-bottom: 3px solid var(--light-blue);
+    }
+
+    /* Responsive navigation: stack vertically on small screens */
+    @media (max-width: 760px) {
+        .site-nav ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .site-nav li {
+            margin: 0;
+        }
+    }
+
     /* Cards stack vertically */
     .cards {
         flex-direction: column;
