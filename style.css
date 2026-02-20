@@ -163,53 +163,51 @@ img {
     }
 
     /* ========================
-       NAVIGATION — STYLISH
+       NAVIGATION
        ======================== */
     .site-nav {
         background-color: var(--dark-blue);
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        border-radius: 8px;
-        margin: 10px auto;
         max-width: 1100px;
+        margin: 10px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         overflow: hidden;
     }
 
     .site-nav ul {
         list-style: none;
-        display: flex;
-        justify-content: center;
+        display: flex;              /* Make the menu horizontal */
+        justify-content: center;    /* Center the menu items */
         flex-wrap: wrap;
         margin: 0;
         padding: 0;
     }
 
     .site-nav li {
-        margin: 0;
+        margin: 0;                  /* Remove default spacing */
     }
 
     .site-nav a {
-        text-decoration: none;
+        display: block;             /* Make clickable area bigger */
+        padding: 12px 25px;         /* Add spacing around links */
         color: var(--text-light);
         font-weight: 600;
-        font-size: 1rem;
-        padding: 12px 20px;
-        display: inline-block;
+        text-decoration: none;
         transition: all 0.3s ease;
         position: relative;
     }
 
-    /* Hover effect: smooth background + underline */
+    /* Hover underline effect */
     .site-nav a::after {
         content: '';
-        display: block;
-        width: 0%;
-        height: 3px;
-        background: var(--light-blue);
         position: absolute;
-        bottom: 0;
         left: 0;
-        transition: width 0.3s ease;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: var(--light-blue);
         border-radius: 2px;
+        transition: width 0.3s ease;
     }
 
     .site-nav a:hover::after,
@@ -219,17 +217,16 @@ img {
 
     .site-nav a:hover,
     .site-nav a:focus {
-        background-color: rgba(231, 239, 249, 0.15);
-        border-radius: 6px;
         color: var(--light-blue);
+        background-color: rgba(231,239,249,0.15);
+        border-radius: 6px;
     }
 
-    /* Responsive navigation: stack vertically on small screens */
+    /* Mobile: stack vertically */
     @media (max-width: 760px) {
         .site-nav ul {
             flex-direction: column;
             align-items: center;
-            gap: 5px;
         }
 
         .site-nav a {
