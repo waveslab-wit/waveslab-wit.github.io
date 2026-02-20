@@ -1,11 +1,15 @@
-/* GLOBAL RESET */
+/* ========================
+   GLOBAL RESET
+   ======================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* COLORS */
+/* ========================
+   COLOR VARIABLES
+   ======================== */
 :root {
     --dark-blue: #002244;
     --light-blue: #e7eff9;
@@ -14,7 +18,9 @@
     --body-bg: #fafafa;
 }
 
-/* GENERAL PAGE LAYOUT */
+/* ========================
+   GENERAL PAGE STYLING
+   ======================== */
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text-dark);
@@ -22,17 +28,44 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER SECTION — TOP DARK NAV */
+/* ========================
+   TOP BAR
+   ======================== */
+.top-bar {
+    background-color: var(--dark-blue);
+    color: var(--text-light);
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.top-bar .college-logo {
+    height: 40px;
+    max-width: 100%;
+}
+
+.top-bar .lab-title {
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+/* ========================
+   HEADER SECTIONS
+   ======================== */
 .header-top {
     background-color: var(--dark-blue);
     padding: 10px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .header-top img {
-    height: 45px; /* small logo */
+    height: 45px;
+    max-width: 100%;
 }
 
 .header-title {
@@ -42,7 +75,6 @@ body {
     text-align: right;
 }
 
-/* LOWER BANNER SECTION — LIGHT BLUE */
 .header-lower {
     background-color: var(--light-blue);
     padding: 25px;
@@ -52,32 +84,94 @@ body {
 }
 
 .header-lower img {
-    height: 110px; /* waves logo bigger */
+    height: 110px;
+    max-width: 100%;
 }
 
-/* MAIN CONTENT AREA */
+/* ========================
+   MAIN CONTENT
+   ======================== */
 main {
     max-width: 1100px;
+    width: 100%;
     margin: 30px auto;
     padding: 0 20px;
 }
 
-/* SECTION HEADERS */
-h2 {
-    margin: 25px 0 10px;
-    font-size: 1.4rem;
-    color: var(--dark-blue);
-    font-weight: bold;
+section {
+    margin-bottom: 30px;
 }
 
-/* TEXT SPACING */
+h2, h3, h4 {
+    color: var(--dark-blue);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 p {
     margin-bottom: 15px;
     font-size: 1rem;
 }
 
-/* RESPONSIVE (MOBILE FIXES) */
+/* ========================
+   CARDS SECTION
+   ======================== */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cards .card {
+    flex: 1;
+    min-width: 220px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* ========================
+   FOOTER
+   ======================== */
+footer {
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* ========================
+   IMAGE SCALING
+   ======================== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================
+   RESPONSIVE STYLING
+   ======================== */
+@media (max-width: 1024px) {
+    .header-lower {
+        justify-content: center;
+    }
+
+    .header-lower img {
+        height: 90px;
+    }
+}
+
 @media (max-width: 760px) {
+    /* Top bar stacking */
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
     .header-top {
         flex-direction: column;
         text-align: center;
@@ -86,10 +180,12 @@ p {
 
     .header-title {
         text-align: center;
+        font-size: 0.9rem;
     }
 
     .header-lower {
         justify-content: center;
+        padding: 15px;
     }
 
     .header-lower img {
@@ -97,6 +193,25 @@ p {
     }
 
     main {
-        margin-top: 20px;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    /* Stack cards vertically */
+    .cards {
+        flex-direction: column;
+        gap: 15px;
     }
 }
