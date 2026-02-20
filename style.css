@@ -162,52 +162,44 @@ img {
         height: 80px;
     }
 
-    /* ========================
-   SITE NAVIGATION — WAVES FLEX
-   ======================== */
-    .site-nav {
-        width: 100%;
-        background-color: var(--dark-blue);
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    /* NAVIGATION BAR */
+    .navbar {
+        background-color: #333;    /* Dark background */
+        font-family: Arial, sans-serif;
     }
 
-    .site-nav ul {
-        display: flex;
-        align-items: center;
+    /* Remove bullets + inline list */
+    .nav-list {
         list-style: none;
-        margin: 0;
-        padding: 0 30px;
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
+        display: flex;
     }
 
-    .site-nav li {
-        margin-right: 20px;
-    }
-
-    .site-nav li.right {
-        margin-left: auto;
-    }
-
-    .site-nav li a {
+    /* NAV LINKS */
+    .nav-list li a {
         display: block;
-        padding: 14px 16px;
-        color: var(--text-light);
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
         text-decoration: none;
-        font-weight: 600;
-        border-radius: 6px;
-        transition: background-color 0.3s, color 0.3s;
+        font-size: 16px;
     }
 
-    .site-nav li a:hover,
-    .site-nav li a:focus {
-        background-color: var(--light-blue);
-        color: var(--dark-blue);
+    /* HOVER EFFECT */
+    .nav-list li a:hover {
+        background-color: #575757;
+        color: #fff;
     }
 
-    .site-nav li a.active {
-        background-color: var(--light-blue);
-        color: var(--dark-blue);
+    /* ACTIVE PAGE STYLE */
+    .nav-list li a.active {
+        background-color: #04AA6D;
     }
 
     /* Cards stack vertically */
