@@ -167,11 +167,11 @@ img {
    ======================== */
     .site-nav {
         width: 100%;
-        background-color: var(--dark-blue); /* dark-blue nav bar */
+        background-color: var(--dark-blue);
     }
 
     .site-nav ul {
-        display: flex;                /* horizontal layout */
+        display: flex;
         align-items: center;
         list-style: none;
         margin: 0;
@@ -182,17 +182,17 @@ img {
     }
 
     .site-nav li {
-        margin-right: 20px;           /* space between left items */
+        margin-right: 20px;
     }
 
     .site-nav li.right {
-        margin-left: auto;            /* pushes Contact all the way right */
+        margin-left: auto;
     }
 
     .site-nav li a {
         display: block;
         padding: 14px 16px;
-        color: var(--text-light);     /* white text */
+        color: var(--text-light);
         text-decoration: none;
         font-weight: 600;
         border-radius: 6px;
