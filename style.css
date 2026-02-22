@@ -449,6 +449,25 @@ img {
         text-align: center;
     }
 
+    .profile-name-bar a {
+        color: #ffffff;
+        text-decoration: none;
+        display: block;      /* Makes entire bar clickable */
+    }
+
+    .profile-name-bar a:visited {
+        color: #ffffff;
+    }
+
+    .profile-name-bar a:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .profile-name-bar a:active {
+        color: #ffffff;
+    }
+
     .profile-details {
         text-align: center;
     }
