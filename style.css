@@ -228,3 +228,66 @@ img {
         font-size: 0.95rem;
     }
 }
+
+/* ========================
+   PEOPLE PAGE STYLING
+   ======================== */
+
+.people-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.person-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 18px;
+    flex: 1 1 450px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.person-photo img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--light-blue);
+}
+
+.person-info h4 {
+    margin-bottom: 5px;
+}
+
+.person-role {
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 8px;
+}
+
+.person-info a {
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+.person-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive stacking */
+@media (max-width: 760px) {
+    .person-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .person-photo img {
+        width: 120px;
+        height: 120px;
+    }
+}
