@@ -315,3 +315,35 @@ img {
         text-align: center;
     }
 }
+
+/* ========================
+   LARGE PROFILE CARD
+   ======================== */
+
+.profile-large {
+    max-width: 900px;
+}
+
+/* ========================
+   PROFILE SECTIONS
+   ======================== */
+
+.profile-section {
+    max-width: 900px;
+    margin-bottom: 35px;
+}
+
+.profile-section h3 {
+    border-bottom: 3px solid var(--light-blue);
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+}
+
+.profile-list {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.profile-list li {
+    margin-bottom: 8px;
+}
