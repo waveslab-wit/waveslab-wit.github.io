@@ -176,6 +176,16 @@ img {
     }
 }
 
+/* Keep name link white in profile header */
+.profile-name-bar a,
+.profile-name-bar a:visited,
+.profile-name-bar a:hover,
+.profile-name-bar a:active {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+
 @media (max-width: 760px) {
     /* Stack header top on mobile */
     .header-top {
