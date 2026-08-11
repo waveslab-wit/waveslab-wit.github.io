@@ -1,71 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WAVES Laboratory | Page Title Here</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<header role="banner" class="site-header">
-    <!-- Top row: College logo + Lab Title -->
-    <div class="header-top">
-        <img src="img/wit_college_logo.png" alt="Wentworth Institute of Technology Logo" class="college-logo">
-        <div class="header-title">
-            Wireless AI for Vulnerabilities & Enhanced Security Lab
-        </div>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Research areas of the WAVES Laboratory."><title>Research | WAVES Laboratory</title><link rel="stylesheet" href="assets/css/styles.css"></head><body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-top">
+    <a class="brand" href="index.html" aria-label="WAVES Lab home">
+      <img class="brand-logo" src="assets/images/waves-logo.png" alt="WAVES Lab waveform logo">
+      <span class="brand-text">
+        <span class="brand-name">WAVES Laboratory</span>
+        <span class="brand-subtitle">Wireless, AI, and Secure Systems Research</span>
+      </span>
+    </a>
+    <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+  </div>
+  <nav class="navbar" aria-label="Primary navigation">
+    <div class="container">
+      <ul class="nav-list" id="primary-navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-    <!-- Bottom row: WAVES logo -->
-    <div class="header-lower">
-        <img src="img/waves_website.png" alt="WAVES Laboratory Logo" class="lab-logo">
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="people.html">People</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
+  </nav>
 </header>
-
-<main class="page-body">
-
-    <!-- Page-specific content goes here -->
-    <section class="page-intro">
-        <h3>Page Title Here</h3>
-        <p>
-            Write a brief introduction or description of this page here.
-        </p>
-    </section>
-
-    <section class="cards">
-        <!-- Optional cards section -->
-        <div class="card">
-            <h4>Card 1 Title</h4>
-            <p>Card 1 content goes here.</p>
-        </div>
-        <div class="card">
-            <h4>Card 2 Title</h4>
-            <p>Card 2 content goes here.</p>
-        </div>
-        <div class="card">
-            <h4>Card 3 Title</h4>
-            <p>Card 3 content goes here.</p>
-        </div>
-    </section>
-
-</main>
-
-<footer>
-    <p>© 2026 WAVES Laboratory - Wentworth Institute of Technology</p>
+<main id="main-content"><section class="page-banner"><div class="container"><span class="eyebrow">Research</span><h1>Research Areas</h1><div class="gold-rule"></div><p>We investigate intelligent, secure, and experimentally validated approaches to future wireless systems.</p></div></section>
+<section><div class="container grid grid-2">
+<article class="card" id="wireless-ai"><h2>Wireless AI and Spectrum Sensing</h2><p>AI models for detecting, classifying, and characterizing wireless activity from raw I/Q samples and spectrum observations.</p><div class="tag-list"><span class="tag">Deep Learning</span><span class="tag">I/Q Data</span><span class="tag">Signal Classification</span></div></article>
+<article class="card" id="security"><h2>Wireless and Physical-Layer Security</h2><p>Detection and mitigation of jamming, interference, spoofing, and adversarial behavior in shared-spectrum networks.</p><div class="tag-list"><span class="tag">Jamming</span><span class="tag">RF Fingerprinting</span><span class="tag">Resilience</span></div></article>
+<article class="card"><h2>Digital Twins for Wireless Networks</h2><p>Real-time digital representations of networks used for monitoring, adaptation, experimentation, and rapid model deployment.</p><div class="tag-list"><span class="tag">Digital Twins</span><span class="tag">Real-Time Systems</span></div></article>
+<article class="card" id="testbeds"><h2>SDR and Experimental Testbeds</h2><p>Over-the-air studies using software-defined radios, controlled emulation, and reproducible network experimentation.</p><div class="tag-list"><span class="tag">USRP</span><span class="tag">GNU Radio</span><span class="tag">Testbeds</span></div></article>
+</div></section>
+<section><div class="container"><span class="eyebrow">Projects</span><h2>Featured Projects</h2><p class="section-intro">Replace these starter entries with current funded projects, student efforts, and demonstrations.</p><div class="grid grid-3"><article class="card"><h3>Project Title One</h3><p>Two or three sentences describing the problem, approach, collaborators, and expected impact.</p></article><article class="card"><h3>Project Title Two</h3><p>Two or three sentences describing the problem, approach, collaborators, and expected impact.</p></article><article class="card"><h3>Project Title Three</h3><p>Two or three sentences describing the problem, approach, collaborators, and expected impact.</p></article></div></div></section>
+</main><footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h2>WAVES Laboratory</h2>
+      <p>Advancing wireless systems, artificial intelligence, cybersecurity, and spectrum research.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>Department of Computing and Data Science<br>Your University<br>Your City, State ZIP</p>
+      <p><a href="mailto:waves@example.edu">waves@example.edu</a></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; <span data-current-year></span> WAVES Laboratory. All rights reserved.</div>
 </footer>
-
-</body>
-</html>
+<script src="assets/js/site.js"></script></body></html>
